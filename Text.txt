@@ -1,0 +1,20 @@
+
+
+อันนี้คือ Dataset ของ Classification ปืน csgo
+https://www.kaggle.com/datasets/christianlillelund/csgo-round-winner-classification
+
+
+อันนี้คือ Dataset ของ predict round winner csgo
+https://huggingface.co/datasets/Kaludi/data-csgo-weapon-classification
+
+
+ส่วนของ Classification ปืน csgo ผมไม่สามารถอัพไฟล์ dataset ทั้งหมดได้เนื่องจากมันเป็นไฟล์ก้อนที่ใหญ่เกินไป 
+ทำให้ไม่สามารถรันหน้าของ Neural Network ได้แบบปกติครับ เพราะปกติมันจะมีการเทียบ predict กับ ค่าที่ถูกต้องกับ valid Data set 
+แต่เหตุที่ไม่สามารถ push dataset ขึ้น git ได้ทำให้ไม่สามารถเว็ป compare กันได้ครับว่า ที่ predict ไปถูกต้องตาม data set ไหม(ถ้าดูตาเปล่าพอตรวจได้อยู่ครับ)
+
+
+def load_models():
+    rf_model = joblib.load("models/randomtree_model.pkl")
+    dnn_model = keras.models.load_model("models/dnn_model.h5")
+    return rf_model, dnn_model
+rf_model, dnn_model = load_models()

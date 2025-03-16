@@ -631,7 +631,6 @@ elif page == "Neural Network Detail":
 elif page == "Neural Network Model":
     st.title("CS:GO Weapon Classifier")
     uploaded_file = st.file_uploader("อัปโหลดภาพปืน CS:GO", type=["jpg", "png", "jpeg"])
-
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
 
