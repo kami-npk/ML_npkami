@@ -12,9 +12,4 @@ https://huggingface.co/datasets/Kaludi/data-csgo-weapon-classification
 ทำให้ไม่สามารถรันหน้าของ Neural Network ได้แบบปกติครับ เพราะปกติมันจะมีการเทียบ predict กับ ค่าที่ถูกต้องกับ valid Data set 
 แต่เหตุที่ไม่สามารถ push dataset ขึ้น git ได้ทำให้ไม่สามารถเว็ป compare กันได้ครับว่า ที่ predict ไปถูกต้องตาม data set ไหม(ถ้าดูตาเปล่าพอตรวจได้อยู่ครับ)
 
-
-def load_models():
-    rf_model = joblib.load("models/randomtree_model.pkl")
-    dnn_model = keras.models.load_model("models/dnn_model.h5")
-    return rf_model, dnn_model
-rf_model, dnn_model = load_models()
+S3. 6604062610403 นายนพกร ภูมิถาวร
